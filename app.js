@@ -10,7 +10,7 @@ const PORT=process.env.PORT;
 
 function controlador(req,res){
   console.log("Se ha realizado una request")
-  res.writeHead("Content-Type","text/html");
+  res.writeHead(200,{"Content-Type":"text/html"});
   res.write("<h1>Esto es increible</h1>")
   res.end()
 }
