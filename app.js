@@ -8,12 +8,15 @@ const PORT=process.env.PORT;
 
 
 
-function request(){
+function controlador(req,res){
   console.log("Se ha realizado una request")
+  res.writeHead("Content-Type","text/html");
+  res.write("<h1>Esto es increible</h1>")
+  res.end()
 }
 
 
 
-http.createServer(request).listen(PORT,()=>{
+http.createServer(controlador).listen(PORT,()=>{
   console.log("Aplicacion corriendo en el puerto: ",PORT)
 });
